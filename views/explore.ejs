@@ -1,0 +1,47 @@
+<% include _header %>
+<div class="jumbotron text-center fluid" >
+  <div class="row" style="min-height: 1.5rem">
+<!--Just for some lazy padding-->
+</div>
+  <h1>Read and chat about a trending topic!</h1>
+  <p>Discover others' political opinion by talking to them face to face!</p>
+</div>
+
+<div class="row" style="min-height: 2rem">
+<!--Just for some lazy padding-->
+</div>
+<div class="container">
+<div class="row">
+<% articles.forEach( function(article,i) { %>
+  <%if (i%3 == 0 && i != 0) { %>
+  </div>
+      <div class="row" style="min-height: 2rem">
+<!--Just for some lazy padding-->
+</div>
+  <div class="row">
+  <% } %>
+  <div class="col-sm-4">
+    <div class="card">
+      <img class="card-img-top" src="../static/<%= article.path%>_pic.jpg"alt="Card image">
+      <div class="card-block" style="min-height: 4rem">
+        <h4 class="card-title"><%= article.name%></h4>
+          <!-- <p class="card-text">Wow: 20 Percent of Millennials Consider Stalin, Kim Jong Un 'Heroes</p> -->
+      </div>
+      <div class="card-block">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-auto">
+            <a href=<%= "/topic/" + article.path%>  class="btn btn-primary">Read Article</a>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+<% }) %>
+</div>
+
+</div>
+</div>
+  <div class="row" style="min-height: 2rem">
+<!--Just for some lazy padding-->
+</div>
+<% include _footer %>

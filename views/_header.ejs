@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<title>Insight</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+    <!-- Custom fonts for this template -->
+    <link href="./static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="./static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./static/css/creative.css" rel="stylesheet">
+    <link rel="stylesheet" href="./static/style.css" crossorigin="anonymous">
+
+</head>
+
+<body>
+<% if (url === "/login" || url === "/signup") { %>
+
+<nav class="navbar navbar-toggleable-md  sticky-top navbar-light bg-faded">
+  <div class="container">
+
+    <div class="navbar-header">
+        <a href = "/">
+            <img src="../static/header_logo.png" style="width:110px;height:45px;"/>
+        </a>
+    </div>
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Back To Home</a></li>
+  </ul>
+</nav>
+</div>
+<% }  else if (url != "/") { %>
+
+<nav class="navbar navbar-toggleable-md  sticky-top navbar-light bg-faded">
+  <div class="container">
+
+    <div class="navbar-header">
+        <a href = "/explore">
+            <img src="../static/header_logo.png" href = "/explore" style="width:110px;height:45px;"/>
+        </a>
+    </div>
+
+    <ul class="navbar-nav ml-auto">
+    <% if (currentUser) { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/edit">
+            Hello, <%= currentUser.name() %>
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/logout">Log out</a></li>
+      <% } else { %>
+        <li class="nav-item"><a class="nav-link" href="/login">Log in</a></li>
+        <li class="nav-item"><a class="nav-link" href="/signup">Sign up</a></li>
+      <% } %>
+  </ul>
+</nav>
+</div>
+<% } %>
+
+<div class="container-fluid">
+
+  <% errors.forEach(function(error) { %>
+    <div class="alert alert-danger" role="alert">
+      <%= error %>
+    </div>
+  <% }) %>
+
+  <% infos.forEach(function(info) { %>
+    <div class="alert alert-info" role="alert">
+      <%= info %>
+    </div>
+  <% }) %>

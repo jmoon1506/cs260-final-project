@@ -1,0 +1,44 @@
+<% include _header %>
+
+<div class="container">
+<div class="row">
+  <div class="col-md-6 col-md-offset-5">
+  <h1>Sign up</h1>
+</div>
+</div>
+<div class="row" style="min-height: 2rem">
+<!--Just for some lazy padding-->
+</div>
+<div class="row">
+<div class="col-md-6 col-md-offset-5">
+    <form action="/signup" method="post">
+      <input name="username" type="email" class="form-control"
+         placeholder="Email" required autofocus>
+      <input name="displayName" type="text" class="form-control"
+         placeholder="Display Name" required>
+      <input name="password" type="password" class="form-control"
+         placeholder="Password" required>
+    <br/>
+    <div class="row">
+          <label for="lgFormGroupInput" class="col-sm-5">Political Leaning</label>
+    </div>
+    <div class="row">
+    <div class="form-check col-sm-5">
+      <label class="form-check-label">
+        <input class="form-check-input" type="radio" name="politicalLeaning" id="exampleRadios1" value="left" checked>
+        left
+      </label>
+    </div>
+    <div class="form-check col-sm-5">
+      <label class="form-check-label">
+        <input class="form-check-input" type="radio" name="politicalLeaning" id="exampleRadios2" value="right">
+        right
+      </label>
+    </div>
+          <input type="submit" value="Sign up" class="btn btn-primary btn-block">
+        </form>
+        </div>
+    </div>
+</div>
+</div>
+<% include _footer %>

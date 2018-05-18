@@ -1,0 +1,31 @@
+<% include _header %>
+<div class="container">
+  <div class="row">
+  <div class="col-md-6">
+    <h1>You have a match!</h1>
+</div>
+<div class="row" style="min-height: 2rem">
+<!--Just for some lazy padding-->
+</div>
+</div>
+  <div class="row">
+  <div class="col-md-6">
+  You're matched with <b> <%= otherUser.name()%></b>!
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+  The topic is: <b> <%= currentArticle.name %> </b>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+  <a href=<%= url %> > Click here to join a video chat room</a>
+</div>
+</div>
+<br>
+<br/>
+</div>
+<% include _footer %>

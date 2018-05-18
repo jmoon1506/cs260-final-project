@@ -1,0 +1,17 @@
+<% include _header %>
+<div class="row">
+  <h1>Add an article</h1>
+</div>
+<div class="row">
+  <div class="col-sm-8">
+    <form action="/articles/addarticle" method="post">
+      <input name="name" type="text" class="form-control" placeholder="Article name">
+      <input name="url" class="form-control" placeholder="Add the url">
+      <input type="submit" value="Update" class="btn btn-primary btn-block">
+    </form>
+  </div>
+
+</div>
+
+
+<% include _footer %>

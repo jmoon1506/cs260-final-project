@@ -1,0 +1,30 @@
+<% include _header %>
+<div class="container">
+<h1>Article on: <%= article.name %></h1>
+<div class="row" style="min-height: 1.5rem">
+<!--Just for some lazy padding-->
+</div>
+<div class="row">
+ <div class="col-sm-10">
+    <object type="text/html" data=<%= article.url %> width="900vw" height="600px" >
+    </object>
+ </div>
+
+ <div class="col-sm-2">
+   <div class="row text-center">
+    If you would like to speak to someone on this topic, click the button below and we will match you with someone from the opposite political leaning
+  </div>
+  <div class="row" style="min-height: 1.5rem">
+  <!--Just for some lazy padding-->
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-12 col-md-auto">
+      <a href=<%= "/join/" + article.path%> class="btn btn-info">Join a Call</a>
+    </div>
+</div>
+
+ </div>
+
+ </div>
+</div>
+<% include _footer %>

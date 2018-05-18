@@ -1,0 +1,16 @@
+<% include _header %>
+
+<h1>Edit your profile</h1>
+
+<form action="/edit" method="post">
+  <input name="displayname" type="text" class="form-control" placeholder="Display name" value="<%= currentUser.displayName || "" %>">
+  <textarea name="bio" class="form-control" placeholder="Tell us about yourself!"><%= currentUser.bio || "" %></textarea>
+  <br/>
+    <div class="row">
+          <label for="lgFormGroupInput" class="col-sm-5">Political Leaning</label>
+    </div>
+  <textarea name="politicalLeaning" class="form-control" placeholder="Enter your political leaning"><%= currentUser.politicalLeaning || "" %></textarea>
+  <input type="submit" value="Update" class="btn btn-primary btn-block">
+</form>
+
+<% include _footer %>

@@ -1,0 +1,56 @@
+.card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.25);
+}
+
+* {
+  font-family: "Open Sans";
+  padding: 0;
+  margin: 0;
+}
+
+.jumbotron {
+  background-repeat: no-repeat;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  background-color: #252f4f;
+}
+
+#test {
+  background-color: #252f4f;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  min-height: 600px;
+}
+
+.card img {
+  height: 220px;
+  background-size: fill;
+}
+#test2 {
+  background-color: #9da4c2;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  min-height: 500px;
+}
+.container-fluid {
+  padding: 0px;
+}
+
+.navbar {
+  color: white;
+}
+.navbar-brand {
+  color: white;
+}
+#headline {
+  text-decoration: underline #f8e578; /* Red underlining */
+}
